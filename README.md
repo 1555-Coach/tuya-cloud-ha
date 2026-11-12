@@ -18,10 +18,19 @@ The official Tuya integration requires creating a developer project on iot.tuya.
 - **Lights** — on/off, brightness, color temperature
 - **Switches** — single and multi-gang, power monitoring outlets
 - **Climate** — AC units, thermostats (mode, temperature, fan speed)
-- **Sensors** — temperature, humidity, power, voltage, current, energy, PM2.5, CO2, VOC, battery
+- **Fans** — speed (percentage and preset), oscillation, direction
 - **Covers** — curtains, blinds (open/close/stop, position)
+- **Locks** — lock/unlock, battery, unlock method tracking
+- **Vacuums** — start/stop/pause, return to dock, fan speed, battery
+- **Humidifiers** — humidifiers and dehumidifiers, target humidity, modes
+- **Sirens** — alarm on/off, volume, duration, tone selection
+- **Sensors** — temperature, humidity, power, voltage, current, energy, PM2.5, CO2, VOC, battery
+- **Binary Sensors** — door/window contacts, motion, smoke, gas, water leak
+- **Numbers** — any writable numeric property (auto-discovered)
+- **Selects** — any writable enum property (auto-discovered)
+- **Buttons** — write-only action triggers (auto-discovered)
 
-Device capabilities are discovered dynamically from the Tuya Thing Model, so new device types get basic support automatically.
+Device capabilities are discovered dynamically from the Tuya Thing Model, so even unlisted device types get basic controls automatically via the generic number/select/button platforms.
 
 ## Installation
 

@@ -26,10 +26,35 @@ PREFIX_TO_WS_URI: dict[str, str] = {
     "SG": "wss://wsmsgs.iot-sea.com",
 }
 
-LIGHT_CATEGORIES = {"dj", "dd", "fwl", "xdd", "dc", "fsd", "jsq", "tgq"}
-SWITCH_CATEGORIES = {"cz", "pc", "kg", "tdq", "bh", "cwysj"}
+LIGHT_CATEGORIES = {"dj", "dd", "fwl", "xdd", "dc", "fsd", "tgq", "dsd", "gyd"}
+SWITCH_CATEGORIES = {"cz", "pc", "kg", "tdq", "bh", "cwysj", "dlq", "qjdcz"}
 CLIMATE_CATEGORIES = {"kt", "wk", "wkf"}
 COVER_CATEGORIES = {"cl", "clkg"}
-SENSOR_CATEGORIES = {"wsdcg", "mcs", "ywbj", "rqbj", "pir", "ldcg", "pm2.5"}
+SENSOR_CATEGORIES = {"wsdcg", "ldcg", "pm2.5", "hjjcy", "wnykzq"}
+BINARY_SENSOR_CATEGORIES = {"mcs", "ywbj", "rqbj", "pir", "sj", "sos"}
+LOCK_CATEGORIES = {"ms", "jtmspro", "videolock"}
+FAN_CATEGORIES = {"fs", "fsd", "fskg"}
+HUMIDIFIER_CATEGORIES = {"jsq", "cs"}
+SIREN_CATEGORIES = {"sgbj", "jqbj"}
+VACUUM_CATEGORIES = {"sd"}
+WATER_HEATER_CATEGORIES = {"rs", "xfh"}
+VALVE_CATEGORIES = {"sf", "qjsq"}
+GARAGE_DOOR_CATEGORIES = {"ckmkzq"}
+SCENE_CATEGORIES = {"cjkg"}
 
-PLATFORMS: list[str] = ["light", "switch", "climate", "sensor", "cover"]
+PLATFORMS: list[str] = [
+    "binary_sensor",
+    "button",
+    "climate",
+    "cover",
+    "fan",
+    "humidifier",
+    "light",
+    "lock",
+    "number",
+    "select",
+    "sensor",
+    "siren",
+    "switch",
+    "vacuum",
+]
