@@ -1,0 +1,71 @@
+get_statistics_config:
+  name: Get statistics configuration
+  description: Query hourly statistics capabilities for all devices under the account.
+
+get_statistics_data:
+  name: Get statistics data
+  description: Query hourly statistics data for a device within a time range (max 24 hours).
+  fields:
+    device_id:
+      name: Device ID
+      description: The Tuya device ID to query statistics for.
+      required: true
+      selector:
+        text:
+    dp_code:
+      name: Data point code
+      description: "The data point code to query (e.g., ele_usage)."
+      required: true
+      selector:
+        text:
+    statistic_type:
+      name: Statistic type
+      description: "Aggregation type: SUM, COUNT, MAX, or MIN."
+      required: true
+      selector:
+        select:
+          options:
+            - "SUM"
+            - "COUNT"
+            - "MAX"
+            - "MIN"
+    start_time:
+      name: Start time
+      description: "Start time in yyyyMMddHH format (e.g., 2026111210)."
+      required: true
+      selector:
+        text:
+    end_time:
+      name: End time
+      description: "End time in yyyyMMddHH format (e.g., 2026111223). Must be within 24 hours of start."
+      required: true
+      selector:
+        text:
+
+send_notification:
+  name: Send notification
+  description: Send a self-notification to the Tuya account owner via SMS, voice, email, or push.
+  fields:
+    method:
+      name: Method
+      description: Notification delivery method.
+      required: true
+      selector:
+        select:
+          options:
+            - "push"
+            - "sms"
+            - "voice"
+            - "email"
+    message:
+      name: Message
+      description: The notification message body.
+      required: true
+      selector:
+        text:
+          multiline: true
+    title:
+      name: Title
+      description: Subject/title for email and push notifications.
+      selector:
+        text:

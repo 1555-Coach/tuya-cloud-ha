@@ -41,10 +41,12 @@ WATER_HEATER_CATEGORIES = {"rs", "xfh"}
 VALVE_CATEGORIES = {"sf", "qjsq"}
 GARAGE_DOOR_CATEGORIES = {"ckmkzq"}
 SCENE_CATEGORIES = {"cjkg"}
+CAMERA_CATEGORIES = {"sp", "ipc", "camera"}
 
 PLATFORMS: list[str] = [
     "binary_sensor",
     "button",
+    "camera",
     "climate",
     "cover",
     "fan",

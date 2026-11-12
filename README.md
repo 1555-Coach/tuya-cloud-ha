@@ -18,6 +18,7 @@ The official Tuya integration requires creating a developer project on iot.tuya.
 - **Lights** — on/off, brightness, color temperature, HS/RGB/RGBW color, work mode switching
 - **Switches** — single and multi-gang, power monitoring outlets
 - **Climate** — AC units, thermostats (mode, temperature, fan speed)
+- **Cameras** — IPC/smart cameras with cloud snapshot capture
 - **Fans** — speed (percentage and preset), oscillation, direction
 - **Covers** — curtains, blinds (open/close/stop, position)
 - **Locks** — lock/unlock, battery, unlock method tracking
@@ -70,6 +71,40 @@ The key prefix determines your data center:
 - **Polling**: Every 2 minutes as a fallback
 - **WebSocket**: Real-time device state push for instant updates
 - **Thing Model**: Device capabilities are fetched from Tuya's cloud, so the integration adapts to each device's actual features rather than relying on hardcoded mappings
+
+## Services
+
+The integration registers these services for advanced use in automations and scripts:
+
+### `tuya_cloud.send_notification`
+
+Send a notification to the Tuya account owner via SMS, voice call, email, or app push.
+
+```yaml
+service: tuya_cloud.send_notification
+data:
+  method: push  # push, sms, voice, or email
+  title: "Security Alert"
+  message: "Motion detected in the living room"
+```
+
+### `tuya_cloud.get_statistics_config`
+
+Query which devices support hourly energy/data statistics (returns response data).
+
+### `tuya_cloud.get_statistics_data`
+
+Query hourly statistics for a device (max 24-hour window, returns response data).
+
+```yaml
+service: tuya_cloud.get_statistics_data
+data:
+  device_id: "0620068884f3eb414579"
+  dp_code: "ele_usage"
+  statistic_type: "SUM"
+  start_time: "2026111210"
+  end_time: "2026111223"
+```
 
 ## Troubleshooting
 
