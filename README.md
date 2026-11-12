@@ -25,13 +25,12 @@ Device capabilities are discovered dynamically from the Tuya Thing Model, so new
 
 ## Installation
 
-### HACS (Recommended)
+### HA Community Store (Recommended)
 
-1. Open HACS in Home Assistant
-2. Click the three-dot menu and select **Custom repositories**
-3. Add the repository URL and select **Integration** as the category
-4. Search for "Tuya Cloud Devices" and install
-5. Restart Home Assistant
+1. Go to **Settings > Add-ons & Store** in Home Assistant
+2. Open the **Community Store** tab
+3. Search for **Tuya Cloud Devices** or add it as a custom repository using the repo URL
+4. Install and restart Home Assistant
 
 ### Manual
 
