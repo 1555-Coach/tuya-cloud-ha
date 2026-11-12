@@ -15,7 +15,7 @@ The official Tuya integration requires creating a developer project on iot.tuya.
 
 ## Supported Platforms
 
-- **Lights** — on/off, brightness, color temperature
+- **Lights** — on/off, brightness, color temperature, HS/RGB/RGBW color, work mode switching
 - **Switches** — single and multi-gang, power monitoring outlets
 - **Climate** — AC units, thermostats (mode, temperature, fan speed)
 - **Fans** — speed (percentage and preset), oscillation, direction
