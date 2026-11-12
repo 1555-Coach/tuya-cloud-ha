@@ -45,9 +45,9 @@ Copy the `custom_components/tuya_cloud` folder into your Home Assistant `config/
 
 ### Getting Your API Key
 
-1. Open the **Tuya Smart** app (or **Smart Life**)
-2. Go to **Settings > Developer Options**
-3. Copy your API key
+1. Go to **[tuya.ai](https://tuya.ai/)** (or [tuyasmart.com](https://tuyasmart.com/) for China)
+2. Sign in with the same account you use in the **Tuya Smart** or **Smart Life** app
+3. Generate and copy your API key
 
 The key prefix determines your data center:
 - `AZ` — US West
