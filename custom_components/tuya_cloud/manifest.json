@@ -1,0 +1,12 @@
+{
+  "domain": "tuya_cloud",
+  "name": "Tuya Cloud Devices",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/1555-Coach/tuya-cloud-ha",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/1555-Coach/tuya-cloud-ha/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

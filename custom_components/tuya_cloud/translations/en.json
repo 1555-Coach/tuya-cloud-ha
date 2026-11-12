@@ -1,0 +1,26 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Tuya Cloud Devices",
+        "description": "Enter your Tuya 2C API key. Get one from the Tuya Smart app under Settings > Developer Options.",
+        "data": {
+          "api_key": "API Key"
+        },
+        "data_description": {
+          "api_key": "Your Tuya Cloud API key (starts with sk-)"
+        }
+      }
+    },
+    "error": {
+      "invalid_key_format": "API key must start with 'sk-'",
+      "unknown_prefix": "Unrecognized API key prefix — cannot determine data center",
+      "invalid_auth": "Authentication failed — check your API key",
+      "cannot_connect": "Cannot connect to Tuya Cloud",
+      "unknown": "An unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "This Tuya Cloud account is already configured"
+    }
+  }
+}
