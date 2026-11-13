@@ -53,7 +53,7 @@ class TuyaCloudClimate(CoordinatorEntity[TuyaCloudCoordinator], ClimateEntity):
 
     _attr_has_entity_name = True
     _attr_name = None
-    _attr_temperature_unit = UnitOfTemperature.CELSIUS
+    _attr_native_temperature_unit = UnitOfTemperature.CELSIUS
     _enable_turn_on_off_backwards_compatibility = False
 
     def __init__(
@@ -153,7 +153,7 @@ class TuyaCloudClimate(CoordinatorEntity[TuyaCloudCoordinator], ClimateEntity):
         return int(temp * (10 ** self._temp_scale))
 
     @property
-    def current_temperature(self) -> float | None:
+    def native_current_temperature(self) -> float | None:
         device = self._device
         if not device:
             return None
@@ -161,7 +161,7 @@ class TuyaCloudClimate(CoordinatorEntity[TuyaCloudCoordinator], ClimateEntity):
         return self._from_tuya_temp(val) if val is not None else None
 
     @property
-    def target_temperature(self) -> float | None:
+    def native_target_temperature(self) -> float | None:
         device = self._device
         if not device:
             return None
